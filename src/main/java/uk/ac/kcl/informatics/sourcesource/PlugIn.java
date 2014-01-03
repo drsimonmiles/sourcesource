@@ -1,12 +1,12 @@
 package uk.ac.kcl.informatics.sourcesource;
 
-import uk.ac.kcl.informatics.opmbuild.Artifact;
-import uk.ac.kcl.informatics.opmbuild.Graph;
-import uk.ac.kcl.informatics.opmbuild.Process;
+import uk.ac.kcl.inf.provoking.model.Activity;
+import uk.ac.kcl.inf.provoking.model.Document;
+import uk.ac.kcl.inf.provoking.model.Entity;
 
 public interface PlugIn {
-    void process (Graph graph, Process occurred);
-    void variable (Graph graph, Artifact occurred);
-    void wasGeneratedBy (Graph graph, Artifact effect, String role, Process cause);
-    void used (Graph graph, Process effect, Artifact cause, String role);
+    void activity (Document graph, Activity occurred);
+    void variable (Document graph, Entity occurred);
+    void wasGeneratedBy (Document graph, Entity effect, String role, Activity cause);
+    void used (Document graph, Activity effect, Entity cause, String role);
 }
